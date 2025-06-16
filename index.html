@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoWorld - Tu Mundo de Motocicletas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-motorcycle me-2"></i>MotoWorld
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#motos">Motos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold text-white mb-4">
+                            Vive la Pasión de las Dos Ruedas
+                        </h1>
+                        <p class="lead text-white mb-4">
+                            Descubre las mejores motocicletas, accesorios y servicios especializados para tu aventura sobre ruedas.
+                        </p>
+                        <a href="#motos" class="btn btn-primary btn-lg me-3">Ver Motos</a>
+                        <a href="#contacto" class="btn btn-outline-light btn-lg">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-motorcycle stat-icon"></i>
+                        <h3 class="stat-number" data-target="500">0</h3>
+                        <p class="stat-label">Motos Vendidas</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-users stat-icon"></i>
+                        <h3 class="stat-number" data-target="1200">0</h3>
+                        <p class="stat-label">Clientes Satisfechos</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-tools stat-icon"></i>
+                        <h3 class="stat-number" data-target="2000">0</h3>
+                        <p class="stat-label">Servicios Realizados</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item">
+                        <i class="fas fa-star stat-icon"></i>
+                        <h3 class="stat-number" data-target="15">0</h3>
+                        <p class="stat-label">Años de Experiencia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Motos -->
+    <section id="motos" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold">Nuestras Motocicletas</h2>
+                    <p class="lead">Explora nuestra amplia gama de motocicletas para todos los estilos y necesidades.</p>
+                </div>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="filter-tabs text-center">
+                        <button class="btn btn-outline-primary active me-2 mb-2" data-filter="all">Todas</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="deportiva">Deportivas</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="cruiser">Cruiser</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="touring">Touring</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="naked">Naked</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Motos -->
+            <div class="row" id="motosGrid">
+                <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="deportiva">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="https://motoshotwheels.com/wp-content/uploads/2023/11/yamaha-yzf-r1-azul-2018-mis53b-17.jpeg" class="card-img-top" alt="Yamaha R1">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="yamaha-r1">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Yamaha YZF-R1</h5>
+                            <p class="card-text">Motocicleta deportiva de alto rendimiento con tecnología MotoGP.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$35.000.000</span>
+                                <span class="badge bg-primary">Deportiva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="cruiser">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=250&fit=crop" class="card-img-top" alt="Harley Davidson">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="harley-sportster">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Harley-Davidson Sportster</h5>
+                            <p class="card-text">Icónica motocicleta cruiser con estilo americano clásico.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$42.000.000</span>
+                                <span class="badge bg-success">Cruiser</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="naked">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_u8TL8CsCVQ6PBbSvrR_RkkIkyUWrN1tWcw&s" class="card-img-top" alt="Kawasaki Z900">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="kawasaki-z900">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kawasaki Z900</h5>
+                            <p class="card-text">Naked deportiva con potencia y agilidad para la ciudad.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$61.990.000</span>
+                                <span class="badge bg-warning">Naked</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="touring">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRvy-b7mLqt-USR-yGt6yiZIpMG1xWJYJbw&s" class="card-img-top" alt="BMW R1250GS">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="bmw-r1250gs">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">BMW R1250GS</h5>
+                            <p class="card-text">La aventura perfecta para largos viajes y todo terreno.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$88.000.000</span>
+                                <span class="badge bg-info">Touring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="deportiva">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1698695290237-5c7be2bd52a8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVjYXRpJTIwcGFuaWdhbGUlMjB2NHxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Ducati Panigale">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="ducati-panigale">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ducati Panigale V4</h5>
+                            <p class="card-text">Superbike italiana con tecnología de MotoGP.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$120.000.000</span>
+                                <span class="badge bg-primary">Deportiva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="naked">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpxkbjQdp7qzUFdPMDie6JrNcKlJS3Xoe2VQ&s" class="card-img-top" alt="Honda CB650R">
+                            <div class="card-overlay">
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="honda-cb650r">Ver Detalles</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Honda CB650R</h5>
+                            <p class="card-text">Naked moderna con estilo neo-sports café.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-primary mb-0">$44.000.000</span>
+                                <span class="badge bg-warning">Naked</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="display-5 fw-bold">Nuestros Servicios</h2>
+                    <p class="lead">Ofrecemos servicios especializados para mantener tu moto en perfectas condiciones.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Mantenimiento</h4>
+                        <p>Servicios de mantenimiento preventivo y correctivo para todas las marcas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h4>Repuestos</h4>
+                        <p>Amplio stock de repuestos originales y alternativos de alta calidad.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-helmet-safety"></i>
+                        </div>
+                        <h4>Accesorios</h4>
+                        <p>Equipos de protección y accesorios para una conducción segura.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h4>Financiamiento</h4>
+                        <p>Planes de financiamiento flexibles para tu nueva motocicleta.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Seguros</h4>
+                        <p>Asesoría en seguros para proteger tu inversión.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Capacitación</h4>
+                        <p>Cursos de conducción segura para todos los niveles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="display-5 fw-bold">Blog Motociclista</h2>
+                    <p class="lead">Mantente informado con las últimas noticias y consejos del mundo de las motos.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <article class="blog-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFCfuLGlFOmw99wuPSD4nzHfDtXgS-RkbbPA&s" class="blog-img" alt="Mantenimiento">
+                        <div class="blog-content">
+                            <span class="blog-date">15 Jun 2025</span>
+                            <h4>Consejos de Mantenimiento para el Verano</h4>
+                            <p>Prepara tu moto para la temporada alta con estos consejos esenciales.</p>
+                            <a href="#" class="btn btn-outline-primary">Leer Más</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <article class="blog-card">
+                        <img src="https://blog.inducascos.com/wp-content/uploads/SHAFT-Mas-alla-de-los-limites-30-1024x745.jpg" class="blog-img" alt="Equipamiento">
+                        <div class="blog-content">
+                            <span class="blog-date">13 Jun 2025</span>
+                            <h4>Equipamiento de Seguridad Esencial</h4>
+                            <p>Conoce el equipamiento básico que todo motociclista debe tener.</p>
+                            <a href="#" class="btn btn-outline-primary">Leer Más</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <article class="blog-card">
+                        <img src="https://www.carroya.com/noticias/sites/default/files/rutas_colombia_vehiculo_carroya_.webp" class="blog-img" alt="Rutas">
+                        <div class="blog-content">
+                            <span class="blog-date">6 Jun 2025</span>
+                            <h4>Las Mejores Rutas de Colombia</h4>
+                            <p>Descubre los destinos más espectaculares para viajar en moto.</p>
+                            <a href="#" class="btn btn-outline-primary">Leer Más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="display-5 fw-bold">Contáctanos</h2>
+                    <p class="lead">¿Tienes alguna pregunta? Estamos aquí para ayudarte.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <select class="form-select" id="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="servicio">Servicio Técnico</option>
+                                <option value="repuestos">Repuestos</option>
+                                <option value="financiamiento">Financiamiento</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3">MotoWorld</h5>
+                    <p>Tu concesionario de confianza para motocicletas, repuestos y servicios especializados.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white-50">Inicio</a></li>
+                        <li><a href="#motos" class="text-white-50">Motos</a></li>
+                        <li><a href="#servicios" class="text-white-50">Servicios</a></li>
+                        <li><a href="#blog" class="text-white-50">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Servicios</h6>
+                    <ul class="list-unstyled">
+                        <li class="text-white-50">Venta de Motos</li>
+                        <li class="text-white-50">Mantenimiento</li>
+                        <li class="text-white-50">Repuestos</li>
+                        <li class="text-white-50">Financiamiento</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="fw-bold mb-3">Contacto</h6>
+                    <ul class="list-unstyled">
+                        <li class="text-white-50"><i class="fas fa-map-marker-alt me-2"></i>Medellín, Colombia</li>
+                        <li class="text-white-50"><i class="fas fa-phone me-2"></i>+57 300 123 4567</li>
+                        <li class="text-white-50"><i class="fas fa-envelope me-2"></i>info@motoworld.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 MotoWorld. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para detalles de moto -->
+    <div class="modal fade" id="motoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="motoModalTitle">Detalles de la Moto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="motoModalBody">
+                    <!-- Contenido dinámico -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Solicitar Información</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
