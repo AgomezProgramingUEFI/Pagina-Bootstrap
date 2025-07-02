@@ -450,3 +450,98 @@ window.MotoWorld = {
     initCounters,
     showFormMessage
 };
+
+// ===== SLIDER JAVASCRIPT =====
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+const slider = document.getElementById('slider');
+const indicators = document.querySelectorAll('.indicator');
+let autoplayInterval;
+
+function updateSlider() {
+    const translateX = -currentSlide * 100;
+    slider.style.transform = `translateX(${translateX}%)`;
+    
+    // Actualizar indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+    });
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+    
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    
+    updateSlider();
+}
+
+function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    updateSlider();
+}
+
+function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+        changeSlide(1);
+    }, 4000); // Cambia cada 4 segundos
+}
+
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+// Inicializar el slider cuando la página esté cargada
+document.addEventListener('DOMContentLoaded', function() {
+    // Iniciar autoplay
+    startAutoplay();
+
+    // Pausar autoplay en hover
+    const sliderContainer = document.querySelector('.slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoplay);
+        sliderContainer.addEventListener('mouseleave', startAutoplay);
+    }
+
+    // Soporte para gestos táctiles (móviles)
+    let startX = 0;
+    let endX = 0;
+
+    if (sliderContainer) {
+        sliderContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                changeSlide(1); // Swipe izquierda
+            } else {
+                changeSlide(-1); // Swipe derecha
+            }
+        }
+    }
+
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            changeSlide(-1);
+        } else if (e.key === 'ArrowRight') {
+            changeSlide(1);
+        }
+    });
+});

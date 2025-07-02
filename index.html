@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -50,7 +52,8 @@
                             Vive la Pasión de las Dos Ruedas
                         </h1>
                         <p class="lead text-white mb-4">
-                            Descubre las mejores motocicletas, accesorios y servicios especializados para tu aventura sobre ruedas.
+                            Descubre las mejores motocicletas, accesorios y servicios especializados para tu aventura
+                            sobre ruedas.
                         </p>
                         <a href="#motos" class="btn btn-primary btn-lg me-3">Ver Motos</a>
                         <a href="#contacto" class="btn btn-outline-light btn-lg">Contáctanos</a>
@@ -59,6 +62,56 @@
             </div>
         </div>
     </section>
+
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src="https://cdn.motor1.com/images/mgl/bg6mmj/s1/2022-ducati-panigale-v4-v4-s---straight.webp"
+                    alt="Montañas">
+                <div class="slide-content">
+                    <h3>Disfruta</h3>
+                    <p>Atrevete a viajar con las mejores motos del mercado.
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://www.mundomotero.com/wp-content/uploads/2018/10/Yamaha-YZF-R1-2020-12.jpg"
+                    alt="Ciudad">
+                <div class="slide-content">
+                    <h3>Vida Urbana</h3>
+                    <p>Haz de tu nueva moto parte de tus futuros viajes</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://media.kawasaki.com/contentstorage/d3c7dafa-1a89-44dc-9e5e-d64756849a46.jpg"
+                    alt="Naturaleza">
+                <div class="slide-content">
+                    <h3>¡Comprala ya!</h3>
+                    <p>Adquiere tu moto a un precio muy adsequible.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.collectingcars.com/069504/15-10-24-JJBB-09.jpg?w=1263&fit=fillmax&crop=edges&auto=format,compress&cs=srgb&q=85"
+                    alt="Aventura">
+                <div class="slide-content">
+                    <h3>Aventuras Épicas</h3>
+                    <p>Vive las mejores aventuras en compañia de tu nueva moto</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <button class="nav-btn prev" onclick="changeSlide(-1)"></button>
+        <button class="nav-btn next" onclick="changeSlide(1)"></button>
+
+        <!-- Indicadores -->
+        <div class="indicators" id="indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
 
     <!-- Estadísticas -->
     <section class="stats-section py-5">
@@ -102,10 +155,11 @@
             <div class="row mb-5">
                 <div class="col-lg-6">
                     <h2 class="display-5 fw-bold">Nuestras Motocicletas</h2>
-                    <p class="lead">Explora nuestra amplia gama de motocicletas para todos los estilos y necesidades.</p>
+                    <p class="lead">Explora nuestra amplia gama de motocicletas para todos los estilos y necesidades.
+                    </p>
                 </div>
             </div>
-            
+
             <!-- Filtros -->
             <div class="row mb-4">
                 <div class="col-12">
@@ -124,9 +178,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="deportiva">
                     <div class="card h-100 shadow-sm">
                         <div class="card-img-wrapper">
-                            <img src="https://motoshotwheels.com/wp-content/uploads/2023/11/yamaha-yzf-r1-azul-2018-mis53b-17.jpeg" class="card-img-top" alt="Yamaha R1">
+                            <img src="https://motoshotwheels.com/wp-content/uploads/2023/11/yamaha-yzf-r1-azul-2018-mis53b-17.jpeg"
+                                class="card-img-top" alt="Yamaha R1">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="yamaha-r1">Ver Detalles</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#motoModal" data-moto="yamaha-r1">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -143,9 +199,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="cruiser">
                     <div class="card h-100 shadow-sm">
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=250&fit=crop" class="card-img-top" alt="Harley Davidson">
+                            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400&h=250&fit=crop"
+                                class="card-img-top" alt="Harley Davidson">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="harley-sportster">Ver Detalles</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#motoModal" data-moto="harley-sportster">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -162,9 +220,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="naked">
                     <div class="card h-100 shadow-sm">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_u8TL8CsCVQ6PBbSvrR_RkkIkyUWrN1tWcw&s" class="card-img-top" alt="Kawasaki Z900">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_u8TL8CsCVQ6PBbSvrR_RkkIkyUWrN1tWcw&s"
+                                class="card-img-top" alt="Kawasaki Z900">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="kawasaki-z900">Ver Detalles</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#motoModal" data-moto="kawasaki-z900">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -181,9 +241,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="touring">
                     <div class="card h-100 shadow-sm">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRvy-b7mLqt-USR-yGt6yiZIpMG1xWJYJbw&s" class="card-img-top" alt="BMW R1250GS">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRvy-b7mLqt-USR-yGt6yiZIpMG1xWJYJbw&s"
+                                class="card-img-top" alt="BMW R1250GS">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="bmw-r1250gs">Ver Detalles</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#motoModal" data-moto="bmw-r1250gs">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -200,9 +262,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="deportiva">
                     <div class="card h-100 shadow-sm">
                         <div class="card-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1698695290237-5c7be2bd52a8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVjYXRpJTIwcGFuaWdhbGUlMjB2NHxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="Ducati Panigale">
+                            <img src="https://images.unsplash.com/photo-1698695290237-5c7be2bd52a8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVjYXRpJTIwcGFuaWdhbGUlMjB2NHxlbnwwfHwwfHx8MA%3D%3D"
+                                class="card-img-top" alt="Ducati Panigale">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="ducati-panigale">Ver Detalles</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#motoModal" data-moto="ducati-panigale">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -219,9 +283,11 @@
                 <div class="col-lg-4 col-md-6 mb-4 moto-card" data-category="naked">
                     <div class="card h-100 shadow-sm">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpxkbjQdp7qzUFdPMDie6JrNcKlJS3Xoe2VQ&s" class="card-img-top" alt="Honda CB650R">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpxkbjQdp7qzUFdPMDie6JrNcKlJS3Xoe2VQ&s"
+                                class="card-img-top" alt="Honda CB650R">
                             <div class="card-overlay">
-                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#motoModal" data-moto="honda-cb650r">Ver Detalles</button>
+                                <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#motoModal" data-moto="honda-cb650r">Ver Detalles</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -244,7 +310,8 @@
             <div class="row mb-5">
                 <div class="col-lg-6 mx-auto text-center">
                     <h2 class="display-5 fw-bold">Nuestros Servicios</h2>
-                    <p class="lead">Ofrecemos servicios especializados para mantener tu moto en perfectas condiciones.</p>
+                    <p class="lead">Ofrecemos servicios especializados para mantener tu moto en perfectas condiciones.
+                    </p>
                 </div>
             </div>
             <div class="row">
@@ -318,7 +385,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <article class="blog-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFCfuLGlFOmw99wuPSD4nzHfDtXgS-RkbbPA&s" class="blog-img" alt="Mantenimiento">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFCfuLGlFOmw99wuPSD4nzHfDtXgS-RkbbPA&s"
+                            class="blog-img" alt="Mantenimiento">
                         <div class="blog-content">
                             <span class="blog-date">15 Jun 2025</span>
                             <h4>Consejos de Mantenimiento para el Verano</h4>
@@ -329,7 +397,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <article class="blog-card">
-                        <img src="https://blog.inducascos.com/wp-content/uploads/SHAFT-Mas-alla-de-los-limites-30-1024x745.jpg" class="blog-img" alt="Equipamiento">
+                        <img src="https://blog.inducascos.com/wp-content/uploads/SHAFT-Mas-alla-de-los-limites-30-1024x745.jpg"
+                            class="blog-img" alt="Equipamiento">
                         <div class="blog-content">
                             <span class="blog-date">13 Jun 2025</span>
                             <h4>Equipamiento de Seguridad Esencial</h4>
@@ -340,7 +409,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <article class="blog-card">
-                        <img src="https://www.carroya.com/noticias/sites/default/files/rutas_colombia_vehiculo_carroya_.webp" class="blog-img" alt="Rutas">
+                        <img src="https://www.carroya.com/noticias/sites/default/files/rutas_colombia_vehiculo_carroya_.webp"
+                            class="blog-img" alt="Rutas">
                         <div class="blog-content">
                             <span class="blog-date">6 Jun 2025</span>
                             <h4>Las Mejores Rutas de Colombia</h4>
@@ -475,4 +545,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
